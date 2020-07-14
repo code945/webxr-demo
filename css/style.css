@@ -1,0 +1,297 @@
+/* 清除默认样式 */
+body,
+p,
+ul,
+input,
+button,
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑", "黑体", Helvetica, Verdana, sans-serif;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    display: block;
+    border: none;
+    background: none;
+    outline: none;
+    appearance: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+input:focus,
+button:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+strong {
+    display: block;
+    font-weight: normal;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: visible;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body *:focus {
+    outline: none;
+}
+
+
+
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-size: calc(28rem /100);
+}
+
+.renderArea {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    touch-action: none;
+    z-index: 10;
+    outline: 0;
+}
+
+
+
+.back_ground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loadingContainer {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.loadingText {
+    margin-top: 100px;
+    font-size: 14px;
+}
+
+.cssload-spinner {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: 50%;
+    top: 45%;
+    margin-left: -33px;
+    margin-top: -33px;
+}
+
+.cssload-spinner:after,
+.cssload-spinner:before {
+    position: absolute;
+    content: "";
+    border: 2px solid rgb(61, 139, 255);
+    width: 31px;
+    height: 31px;
+}
+
+.cssload-spinner:after {
+    animation: cssload-spinner1 2.88s linear infinite;
+}
+
+.cssload-spinner:before {
+    width: 43px;
+    height: 43px;
+    margin-left: -6.5px;
+    margin-top: -6.5px;
+    animation: cssload-spinner2 2.88s linear infinite;
+}
+
+
+
+@keyframes cssload-spinner1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cssload-spinner2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+.btn-ar {
+    color: #555;
+    margin: auto;
+    padding:  calc(20rem /100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: #2196F3 2px solid;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.btn-ar:hover { 
+    border: #67b5f3 2px solid;
+}
+
+.disabled { 
+    border: #9d9d9d 2px solid;
+    color: #9d9d9d;
+}
+
+.btn-placement
+{
+    color: #9d9d9d;
+    position: fixed;
+    width: calc(150rem /100);
+    height: calc(150rem /100);
+    bottom:  calc(100rem /100);
+    left:  50%;
+    transform: translate(-50%, -50%);
+    border: #9d9d9d  calc(10rem /100) solid; 
+    border-radius:calc(120rem /100) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.controls{
+    position: fixed;
+    width: 100%;
+    height: calc(200rem /100);
+    bottom:  calc(100rem /100);
+    left:  0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-start{
+    color: #9d9d9d; 
+    width: calc(150rem /100);
+    height: calc(150rem /100);  
+    border: #9d9d9d  calc(10rem /100) solid; 
+    border-radius:calc(120rem /100) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.btn-cancel{
+    width: calc(100rem /100);
+    height: calc(100rem /100);  
+    border: #9d9d9d  calc(10rem /100) solid; 
+    border-radius:calc(100rem /100) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    background-color: #fff;
+    background-color: #9d9d9d;
+    font-size:calc(14rem /100) ;
+    margin-right:calc(40rem /100) ;
+}
+
+.btn-clear{ 
+    width: calc(100rem /100);
+    height: calc(100rem /100); 
+    color: #fff; 
+    border: #f44336  calc(10rem /100) solid; 
+    border-radius:calc(100rem /100) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f44336;
+    font-size:calc(14rem /100) ;
+    margin-left:calc(40rem /100) ;
+}
+
+.on
+{
+    color: #2196F3; 
+    border: #2196F3  calc(10rem /100) solid;
+}
+
+.hide {
+    display: none;
+}

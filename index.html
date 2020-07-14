@@ -1,0 +1,59 @@
+<!--
+ * @Author: hongxu.lin
+ * @Date: 2020-07-13 15:29:34
+ * @LastEditTime: 2020-07-14 13:44:46
+-->
+<!DOCTYPE html>
+<html style="font-size: 50px;">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            (function () {
+                var recalc = function () {
+                    var clientWidth = document.documentElement.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        document.documentElement.style.fontSize = "100px";
+                    } else {
+                        document.documentElement.style.fontSize =
+                            100 * (clientWidth / 750) + "px";
+                    }
+                };
+                recalc();
+                window.addEventListener("resize", recalc, false);
+            })();
+        </script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <title>AR Demo</title>
+    </head>
+
+    <body>
+        <a id="xrBtn" href="javascript:void(0)" class="btn-ar">点击开启AR</a>
+        <div class="overlay hide">
+            <div class="controls">
+                <a class="btn-cancel">
+                    <i class="fa fa-rotate-left"></i>
+                    取消</a
+                >
+                <a
+                    id="placementBtn"
+                    href="javascript:void(0)"
+                    class="btn-start on"
+                    >开始</a
+                >
+                <a class="btn-clear"><i class="fa fa-trash"></i>清除</a>
+            </div>
+        </div>
+
+        <script src="js/three.min.js"></script>
+        <script src="js/lines/LineSegmentsGeometry.js"></script>
+        <script src="js/lines/LineGeometry.js"></script>
+        <script src="js/lines/LineMaterial.js"></script>
+        <script src="js/lines/LineSegments2.js"></script>
+        <script src="js/lines/Line2.js"></script>
+        <script src="js/app.js" type="module"></script>
+    </body>
+</html>
